@@ -1,0 +1,269 @@
+//TODO: NAVBAR
+.header__toped {
+  position: relative;
+  z-index: 20;
+}
+
+.navbar {
+  padding: 50px 0;
+
+  display: flex;
+  //justify-content: space-between;
+  align-items: center;
+
+  position: relative;
+
+  @media only screen and(max-width: $bp-medium) {
+    justify-content: space-between;
+    padding: 30px 0 50px 0;
+  }
+
+  &__brand {
+    flex: 1 1 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &--logo {
+      @media only screen and(max-width: $bp-small) {
+        width: 120px;
+      }
+    }
+  }
+
+  .burger__menu {
+    // flex: 0 0 40%;
+
+    @media only screen and(max-width: $bp-medium) {
+      flex: 0 0 100%;
+      display: flex;
+      align-items: center;
+      width: 100%;
+    }
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+
+    @media only screen and (max-width: $bp-medium) {
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+    }
+  }
+
+  &__number {
+    display: flex;
+    align-items: center;
+
+    order: 2;
+
+    @media only screen and (max-width: $bp-medium) {
+      transform: translateX(10px);
+    }
+
+    & a:first-child {
+      font-size: 2.5rem;
+      color: $color-green;
+      border: 2px solid #47a3a0;
+      border-radius: 57px;
+      padding: 0 40px 0 20px;
+      white-space: nowrap;
+
+      @media only screen and (max-width: $bp-medium) {
+        color: #ffffff;
+        font-size: 22px;
+        border: 2px solid #ffffff;
+      }
+    }
+
+    & a:last-child {
+      background: #47a3a0;
+      padding: 15px;
+      border-radius: 50%;
+      transform: translateX(-30px);
+      height: 6.4rem;
+      width: 6.4rem;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      & img {
+        animation: ring 1s ease-in-out infinite;
+      }
+    }
+  }
+
+  &__cart {
+    margin: 0 25px;
+    order: 1;
+
+    @media only screen and(max-width: $bp-medium) {
+      margin: 0 5px;
+    }
+
+    & a {
+      position: relative;
+    }
+
+    &--product-count {
+      position: absolute;
+      bottom: 0;
+      right: -8px;
+      width: 17px;
+      height: 17px;
+      background-color: red;
+      color: #ffffff;
+      border-radius: 50%;
+
+      align-items: center;
+      justify-content: center;
+      display: flex;
+    }
+  }
+
+  &__lang {
+    display: flex;
+    color: $color-green;
+    font-family: $ceraRoundProBold, sans-serif;
+    font-size: 35px;
+
+    order: 3;
+
+    @media only screen and(max-width: $bp-medium) {
+      margin-bottom: 30px;
+    }
+
+    & a {
+      color: rgba($color-green, 0.6);
+
+      @media only screen and(max-width: $bp-medium) {
+        color: rgba(#ffffff, 0.6);
+      }
+    }
+
+    & a.active {
+      color: $color-green;
+      @media only screen and(max-width: $bp-medium) {
+        color: #ffffff;
+      }
+    }
+
+    & span {
+      font-family: sans-serif;
+      color: #e4e4e4;
+      margin: 0 4px;
+    }
+  }
+}
+
+.navbar__burger {
+  display: none;
+  margin-left: 3rem;
+}
+
+@media only screen and(max-width: $bp-medium) {
+  .burger__menu {
+    top: -100%;
+    transition: all 1s;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: fixed;
+    left: 0;
+    background-color: rgba(126, 191, 189, 0.7);
+    backdrop-filter: blur(8px);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 5;
+  }
+
+  .burger__menu.active {
+    top: 0;
+    visibility: visible;
+  }
+}
+
+@media only screen and(max-width: $bp-medium) {
+  .navbar__burger {
+    display: block;
+    width: 35px;
+    height: 20px;
+    position: relative;
+    line-height: 2;
+    z-index: 10;
+
+    span {
+      width: 100%;
+      height: 3px;
+      position: absolute;
+      top: 8.5px;
+      background-color: $color-green;
+      transition: all 0.8s;
+    }
+
+    &::before,
+    &::after {
+      content: '';
+      width: 50%;
+      height: 3px;
+      position: absolute;
+      background-color: $color-green;
+      transition: all 0.8s;
+    }
+
+    &::before {
+      top: 0;
+      right: 0;
+    }
+
+    &::after {
+      bottom: 0;
+      left: 0;
+    }
+
+    &.active {
+      span {
+        transform: rotate(45deg);
+      }
+
+      &::before {
+        transform-origin: left;
+        top: 9px;
+        transform: rotate(-405deg);
+      }
+
+      &::after {
+        transform-origin: right;
+        bottom: 9px;
+        transform: rotate(-405deg);
+      }
+    }
+  }
+}
+
+@keyframes ring {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(25deg);
+  }
+
+  50% {
+    transform: rotate(20deg);
+  }
+
+  75% {
+    transform: rotate(25deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}

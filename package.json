@@ -1,0 +1,22 @@
+{
+  "name": "laykis",
+  "version": "1.0.0",
+  "description": "Cyber-animals",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch:sass": "node-sass sass/main.scss css/style.css -w",
+    "start": "npm-run-all --parallel  watch:sass compile:sass",
+    "compile:sass": "node-sass sass/main.scss css/style.comp.css -w"
+  },
+  "author": "Sarvar Cyber-animals",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^7.1.4",
+    "concat": "^1.0.3",
+    "node-sass": "^4.5.3",
+    "npm-run-all": "^4.1.1",
+    "postcss-cli": "^4.1.1"
+  }
+}
+

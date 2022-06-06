@@ -1,0 +1,238 @@
+.advertising {
+  background-image: url('../img/header-dog.png');
+  background-repeat: no-repeat;
+  background-size: 1050px 819px;
+  background-position: right 10%;
+  padding: 80px 0;
+
+  @media only screen and(max-width: 1500px) {
+    background-position: right -10% bottom;
+  }
+
+  @media only screen and(max-width: $bp-large) {
+    background-size: 900px 700px;
+    background-position: right -10% bottom 0;
+  }
+
+  @media only screen and(max-width: $bp-small) {
+    background-size: 700px 500px;
+    background-position: right 25% bottom 0;
+    padding: 0 0 80px 0;
+  }
+
+  @media only screen and(max-width: $bp-smallest) {
+    background-size: 500px 360px;
+    background-position: right 70% bottom 180px;
+  }
+}
+
+.ads {
+  &__body {
+    display: flex;
+  }
+
+  &__left {
+    max-width: 750px;
+    //flex: 0 0 52%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 100%;
+  }
+
+  &__top {
+    margin-bottom: 12rem;
+  }
+
+  &__title {
+    font-size: 9.6rem;
+    font-family: $ceraRoundProBold, sans-serif;
+    line-height: 9.264rem;
+    color: #616161;
+
+    & span {
+      font-size: 10rem;
+      color: #ffd471;
+      font-family: $helveticaNeueCyr, sans-serif;
+
+      @media only screen and(max-width: $bp-smallest) {
+        font-size: 45px;
+      }
+    }
+
+    @media only screen and(max-width: $bp-smallest) {
+      font-size: 30px !important;
+      line-height: 32px;
+    }
+
+    @media only screen and(max-width: $bp-small) {
+      font-size: 7rem;
+      text-align: center;
+    }
+  }
+
+  &__subtitle {
+    font-size: 4.8rem;
+    font-family: $ceraRoundProBold, sans-serif;
+    color: $color-secondary;
+    line-height: 48px;
+    margin-top: 20px;
+
+    @media only screen and(max-width: $bp-smallest) {
+      font-size: 18px !important;
+    }
+
+    @media only screen and(max-width: $bp-small) {
+      font-size: 4rem;
+      text-align: center;
+    }
+  }
+
+  &__middle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 150px;
+
+    @media only screen and(max-width: $bp-small) {
+      margin-bottom: 0;
+    }
+
+    @media only screen and(max-width: $bp-smallest) {
+      justify-content: center;
+    }
+  }
+
+  &__order {
+    display: flex;
+    align-items: center;
+    padding: 22px 28px;
+    background: $color-green;
+    border-radius: 20.7359px;
+    border: none;
+    color: #ffffff;
+    font-size: 2.4rem;
+    transition: 0.2s;
+    border: 1px solid transparent;
+
+    &:hover {
+      background-color: #ffffff;
+      color: $color-green;
+      border: 1px solid $color-green;
+    }
+
+    &:hover span {
+      background-color: #47a3a0;
+
+      & path {
+        fill: #ffffff;
+      }
+    }
+
+    @media only screen and(max-width: $bp-smallest) {
+      display: flex;
+      margin-top: 240px;
+      padding: 13px 24px;
+    }
+
+    & span {
+      display: flex;
+      padding: 5px 10px;
+      background-color: #ffffff;
+      border-radius: 50%;
+      margin-left: 28px;
+    }
+  }
+
+  &__animated--image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 57px 35px;
+    position: relative;
+
+    @media only screen and(max-width: $bp-smallest) {
+      padding: 26px 18px;
+      display: none;
+    }
+
+    &-self {
+      @media only screen and(max-width: $bp-smallest) {
+        content: url('../img/dog-cat-small.svg');
+      }
+    }
+
+    &-text {
+      position: absolute;
+      left: 0;
+      top: 0;
+      //transform: translate(-50%,-50%);
+      animation: spin 10s linear infinite;
+
+      @media only screen and(max-width: $bp-smallest) {
+        content: url('../img/dog-cat-bg-small.svg');
+      }
+    }
+  }
+
+  &__animated--image.mobile {
+    display: none;
+
+    @media only screen and(max-width: $bp-smallest) {
+      display: flex;
+    }
+  }
+
+  & &__products {
+    @media only screen and(max-width: $bp-small) {
+      display: none;
+    }
+  }
+
+  &__products {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    & p {
+      font-size: 4rem;
+      color: $color-green;
+      font-family: $ceraRoundProBold, sans-serif;
+    }
+
+    & img {
+      margin-left: 3rem;
+      animation: spring 800ms ease infinite;
+    }
+  }
+}
+
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spring {
+  0% {
+    transform: translateY(14px);
+  }
+  20% {
+    transform: translateY(20px);
+  }
+  40% {
+    transform: translateY(10px);
+  }
+  60% {
+    transform: translateY(16px);
+  }
+  80% {
+    transform: translateY(14px);
+  }
+  100% {
+    transform: translateY(14px);
+  }
+}

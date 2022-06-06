@@ -1,0 +1,130 @@
+.certificate {
+  padding: 100px 0;
+
+  @media only screen and(max-width: $bp-smallest) {
+    padding: 60px 0;
+  }
+
+  &__title {
+    margin-bottom: 11rem;
+    display: flex;
+
+    cursor: pointer;
+
+    & h2 {
+      font-family: $ceraRoundProBold, sans-serif;
+      font-size: 4rem;
+      color: $color-green;
+
+      @media only screen and(max-width: $bp-smallest) {
+        max-width: 220px;
+      }
+    }
+
+    @media only screen and(max-width: $bp-smallest) {
+      margin-bottom: 60px;
+    }
+
+    & img {
+      margin-left: 2rem;
+      animation: spring 1s ease infinite;
+    }
+  }
+
+  &__cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  &__card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    padding: 3.5rem 4rem;
+    border: 1px solid #e1f0fe;
+    box-shadow: 0px 10px 15px rgba(71, 163, 160, 0.1);
+    border-radius: 20px;
+    margin-top: 2rem;
+    position: relative;
+    transition: 1s;
+
+    @media only screen and (max-width: 640px) {
+      flex: 0 0 100%;
+    }
+
+    &--view {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      z-index: -1;
+    }
+
+    &:hover &--view {
+      z-index: 10;
+
+      @media only screen and (max-width: $bp-small) {
+        z-index: -1;
+      }
+    }
+
+    &:hover:before {
+      top: 0;
+      @media only screen and (max-width: $bp-small) {
+        top: -50%;
+      }
+    }
+
+    &:hover:after {
+      bottom: 0;
+
+      @media only screen and (max-width: $bp-small) {
+        bottom: -50%;
+      }
+    }
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 50%;
+      background: rgba($color-green, 0.7);
+      transition: all 600ms;
+      z-index: 5;
+    }
+
+    &:before {
+      left: 0;
+      top: -50%;
+    }
+
+    &:after {
+      left: 0;
+      bottom: -50%;
+    }
+
+    &--photo {
+      width: 77px;
+
+      & img {
+        width: 100%;
+      }
+    }
+
+    &--text {
+      text-align: center;
+      max-width: 125px;
+      margin-left: 4.5rem;
+      color: #000000;
+      font-family: $ceraRoundProBold, sans-serif;
+      font-size: 1.8rem;
+      line-height: 20px;
+    }
+  }
+}

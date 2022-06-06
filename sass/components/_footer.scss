@@ -1,0 +1,120 @@
+.footer {
+  background: rgba(126, 191, 189, 0.1);
+  padding: 50px 0 15px 0;
+
+  &__body {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 6.5rem;
+    border-bottom: 1px solid #ffd471;
+
+    @media only screen and(max-width: $bp-small) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__brand {
+    width: 144px;
+    display: flex;
+    align-items: center;
+
+    & img {
+      width: 100%;
+    }
+
+    @media only screen and(max-width: $bp-small) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__charity {
+    display: flex;
+    align-items: center;
+
+    margin: 0 20px;
+
+    @media only screen and(max-width: $bp-smallest) {
+      margin: 0;
+    }
+
+    & img {
+      margin-right: 10px;
+    }
+
+    & p {
+      font-family: $ceraRoundProBold, sans-serif;
+      font-size: 2rem;
+      color: $color-green;
+      max-width: 350px;
+      line-height: 22px;
+
+      @media only screen and(max-width: $bp-small) {
+        max-width: 290px;
+      }
+    }
+
+    @media only screen and(max-width: $bp-small) {
+      margin-bottom: 35px;
+    }
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+
+    & a {
+      width: 4.8rem;
+      height: 4.8rem;
+
+      & img {
+        width: 100%;
+      }
+
+      @media only screen and(max-width: $bp-small) {
+        width: 42px;
+        height: 42px;
+      }
+    }
+
+    & a:not(:last-child) {
+      margin-right: 2rem;
+    }
+  }
+
+  &__bottom {
+    padding-top: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media only screen and(max-width: $bp-smallest) {
+      flex-direction: column;
+    }
+
+    & a {
+      display: flex;
+      color: #47a3a0;
+      align-items: center;
+
+      & svg {
+        width: 100px;
+        height: 20px;
+        margin-left: 3px;
+
+        & path {
+          fill: #47a3a0;
+        }
+      }
+    }
+
+    & p {
+      font-size: 1.4rem;
+      color: $color-green;
+
+      @media only screen and(max-width: $bp-small) {
+        text-align: center;
+      }
+    }
+  }
+}

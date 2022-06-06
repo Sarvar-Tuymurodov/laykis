@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="img/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="img/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="img/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="img/favicon/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="img/favicon/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+
+    <meta name="msapplication-TileColor" content="#ffc40d" />
+    <meta name="theme-color" content="#333333" />
+
+    <link
+      rel="stylesheet"
+      href="css/sweetalert/sweetalert2.min.css"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="sass/main.css" type="text/css" />
+    <title>Laykis</title>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="navbar">
+          <div class="navbar__brand">
+            <a href="index.html"
+              ><img
+                class="navbar__brand--logo"
+                src="img/logo.svg"
+                alt="page logo"
+            /></a>
+
+            <li class="navbar__cart">
+              <a id="navbarCart" href="">
+                <span
+                  class="navbar__cart--product-count"
+                  id="productsInCartCount"
+                  >0</span
+                >
+                <img src="img/market.svg" alt=""
+              /></a>
+            </li>
+          </div>
+          <div class="burger__menu">
+            <ul class="navbar__list">
+              <li class="navbar__number">
+                <a href="tel:+998990103888">+998 99 010 38 88</a>
+                <a href="tel:+998990103888">
+                  <img src="img/call-icon.svg" alt=""
+                /></a>
+              </li>
+
+              <li class="navbar__lang">
+                <a href="#" class="ang-ru active">RU</a>
+                <span>|</span>
+                <a href="uz/index.html" class="lang-uz">UZ</a>
+              </li>
+            </ul>
+          </div>
+          <div class="navbar__burger">
+            <span></span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="advertising ads">
+        <div class="container">
+          <div class="ads__body">
+            <div class="ads__left">
+              <div class="ads__top">
+                <h1 class="ads__title">
+                  Корм <span>#1</span> для кошек и собак
+                </h1>
+                <h3 class="ads__subtitle">Произведенный в Узбекистане</h3>
+              </div>
+
+              <div class="ads__animated--image mobile">
+                <img
+                  class="ads__animated--image-self"
+                  src="img/dog-cat.svg"
+                  alt=""
+                />
+                <img
+                  class="ads__animated--image-text"
+                  src="img/dog-cat-bg.svg"
+                  alt=""
+                />
+              </div>
+
+              <div class="ads__middle">
+                <button class="ads__order" onclick="goToSection('products')">
+                  Купить сейчас
+                  <span
+                    ><svg
+                      width="13"
+                      height="22"
+                      viewBox="0 0 13 22"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M12.4384 12.1969C12.9989 11.6364 12.9989 10.7278 12.4384 10.1674L3.30568 1.03462C2.74524 0.474191 1.83661 0.474191 1.27617 1.03462C0.715742 1.59505 0.715742 2.50369 1.27617 3.06412L9.39418 11.1821L1.27617 19.3001C0.715742 19.8606 0.715742 20.7692 1.27617 21.3296C1.83661 21.8901 2.74524 21.8901 3.30568 21.3296L12.4384 12.1969ZM10.4097 12.6172H11.4237V9.74705H10.4097V12.6172Z"
+                        fill="#47A3A0"
+                      />
+                    </svg>
+                  </span>
+                </button>
+                <div class="ads__animated--image">
+                  <img
+                    class="ads__animated--image-self"
+                    src="img/dog-cat.svg"
+                    alt=""
+                  />
+                  <img
+                    class="ads__animated--image-text"
+                    src="img/dog-cat-bg.svg"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="ads__products" onclick="goToSection(`products`)">
+                <p>Продукты</p>
+                <img src="img/arrows-bottom.svg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="products">
+        <div class="container">
+          <div class="ads__products">
+            <p>Продукты</p>
+            <img src="img/arrows-bottom.svg" alt="" />
+          </div>
+          <div class="products__all"></div>
+        </div>
+      </div>
+
+      <div class="certificate">
+        <div class="container">
+          <div class="certificate__title" onclick="goToSection(`certificate`)">
+            <h2>Сертификаты качества</h2>
+            <img src="img/arrows-bottom.svg" alt="" />
+          </div>
+
+          <div class="certificate__cards">
+            <div class="certificate__card">
+              <div class="certificate__card--view">
+                <img src="img/view-icon.svg" alt="" />
+              </div>
+              <div class="certificate__card--photo">
+                <img src="img/certificate.png" alt="" />
+              </div>
+              <div class="certificate__card--text">
+                <p>Сертификат соответствия Узстандарт</p>
+              </div>
+            </div>
+            <div class="certificate__card">
+              <div class="certificate__card--view">
+                <img src="img/view-icon.svg" alt="" />
+              </div>
+              <div class="certificate__card--photo">
+                <img src="img/certificate.png" alt="" />
+              </div>
+              <div class="certificate__card--text">
+                <p>Сертификат соответствия Узстандарт</p>
+              </div>
+            </div>
+            <div class="certificate__card">
+              <div class="certificate__card--view">
+                <img src="img/view-icon.svg" alt="" />
+              </div>
+              <div class="certificate__card--photo">
+                <img src="img/certificate.png" alt="" />
+              </div>
+              <div class="certificate__card--text">
+                <p>Сертификат соответствия Узстандарт</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="creator">
+        <div class="container">
+          <div class="creator__content">
+            <div class="creator__left">
+              <div class="creator__left--photo">
+                <img src="img/creator-photo.png" alt="" />
+              </div>
+              <div class="creator__left--title">
+                <h3>Всем привет!</h3>
+                <p>
+                  Основательница приюта для бездомных животных, запустила
+                  производство корма для собак и кошек.
+                </p>
+              </div>
+            </div>
+            <div class="creator__right">
+              <h2 class="creator__right--title">Ирода Маткаримова</h2>
+              <h3 class="creator__right--subtitle">
+                Корм одобрен ведущими ветеринарами Узбекистана. Паштет подходит
+                для кормления котят, кусковой лосось можно давать
+                стерилизованным кошкам.
+              </h3>
+              <p class="creator__right--paragraph">
+                Кошачье лакомство выпускается в виде рыбных консервов двух видов
+                – паштет и кусковой лосось. В 325-граммовых банках содержатся
+                только рыбные компоненты в собственном желе и ничего больше –
+                никаких красителей, ароматизаторов, усилителей вкуса.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact">
+        <div class="container">
+          <div class="contact__types">
+            <div class="contact__geo">
+              <a
+                target="_blank"
+                href="https://www.google.com/maps/place/Laykis/@41.2806483,69.2865357,15z/data=!4m5!3m4!1s0x0:0x53b7f6ad17f12950!8m2!3d41.2806483!4d69.2865357"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="76"
+                  height="76"
+                  viewBox="0 0 76 76"
+                  fill="none"
+                >
+                  <rect
+                    x="38"
+                    y="35"
+                    width="0.0159091"
+                    height="0.0234909"
+                    stroke="#47A3A0"
+                    stroke-width="5"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M37.5 61L49.5438 43.1064C52.8425 38.2055 52.8425 31.7945 49.5438 26.8936C43.79 18.3451 31.21 18.3451 25.4562 26.8936C22.1575 31.7945 22.1575 38.2055 25.4562 43.1064L37.5 61Z"
+                    stroke="#47A3A0"
+                    stroke-width="3"
+                    stroke-linejoin="round"
+                  />
+                  <circle
+                    xmlns="http://www.w3.org/2000/svg"
+                    cx="38"
+                    cy="38"
+                    r="36.5"
+                    stroke="#47A3A0"
+                    stroke-width="3"
+                  />
+                </svg>
+              </a>
+              <div class="contact__geo--text">
+                <h3>Aдрес:</h3>
+                <a
+                  target="_blank"
+                  href="https://www.google.com/maps/place/Laykis/@41.2806483,69.2865357,15z/data=!4m5!3m4!1s0x0:0x53b7f6ad17f12950!8m2!3d41.2806483!4d69.2865357"
+                  >Мирабадский р-н ул. Саракуль дом 6</a
+                >
+              </div>
+            </div>
+            <div class="contact__phone">
+              <a href="tel:+998990103888">
+                <svg
+                  width="76"
+                  height="76"
+                  viewBox="0 0 76 76"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M57.5344 23.7532C55.7014 39.8921 42.8921 52.7014 26.7531 54.5344C24.5581 54.7838 22.7598 52.9689 22.7598 50.7598V42.6348C22.7598 42.0825 23.2078 41.6371 23.7595 41.6123C26.2184 41.5017 28.5716 40.9852 30.7537 40.1281L34.0771 43.4515C39.4825 40.8647 43.8647 36.4826 46.4515 31.0772L43.1281 27.7537C43.9852 25.5716 44.5017 23.2184 44.6123 20.7595C44.6371 20.2078 45.0825 19.7598 45.6348 19.7598H53.7598C55.9689 19.7598 57.7838 21.5581 57.5344 23.7532Z"
+                    stroke="#47A3A0"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <circle
+                    cx="38"
+                    cy="38"
+                    r="36.5"
+                    stroke="#47A3A0"
+                    stroke-width="3"
+                  />
+                </svg>
+              </a>
+              <div class="contact__phone--text">
+                <h3>Тел номер:</h3>
+                <a href="tel:+998990103888">+998 99 010 38 88</a>
+              </div>
+            </div>
+            <div class="contact__email">
+              <svg
+                width="76"
+                height="76"
+                viewBox="0 0 76 76"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M21 24V22.5C20.1716 22.5 19.5 23.1716 19.5 24H21ZM56 24H57.5C57.5 23.1716 56.8284 22.5 56 22.5V24ZM21 25.5H56V22.5H21V25.5ZM54.5 24V47.6508H57.5V24H54.5ZM52.4286 49.7222H24.5714V52.7222H52.4286V49.7222ZM22.5 47.6508V24H19.5V47.6508H22.5ZM24.5714 49.7222C23.4274 49.7222 22.5 48.7948 22.5 47.6508H19.5C19.5 50.4517 21.7706 52.7222 24.5714 52.7222V49.7222ZM54.5 47.6508C54.5 48.7948 53.5726 49.7222 52.4286 49.7222V52.7222C55.2294 52.7222 57.5 50.4517 57.5 47.6508H54.5Z"
+                  fill="#47A3A0"
+                />
+                <path
+                  d="M21 25L38.5 42.5L56 25"
+                  stroke="#47A3A0"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <circle
+                  cx="38"
+                  cy="38"
+                  r="36.5"
+                  stroke="#47A3A0"
+                  stroke-width="3"
+                />
+              </svg>
+
+              <div class="contact__email--text">
+                <h3>ЭЛ. АДРЕС</h3>
+                <p>www.laykis.com</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11993.18650881849!2d69.2865357!3d41.2806483!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x53b7f6ad17f12950!2sLaykis!5e0!3m2!1sru!2s!4v1652331954506!5m2!1sru!2s"
+          width="600"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__body">
+          <div class="footer__brand">
+            <img src="img/logo.svg" alt="" />
+          </div>
+          <div class="footer__charity">
+            <img src="img/hayot-logo.svg" alt="" />
+            <p>
+              25% от дохода отправляется на благотворительность в приют Хаёт
+            </p>
+          </div>
+          <div class="footer__links">
+            <a href="" class="footer__link">
+              <img src="img/instagram.svg" alt="" />
+            </a>
+            <a href="" class="footer__link">
+              <img src="img/facevook.svg" alt="" />
+            </a>
+            <a href="" class="footer__link">
+              <img src="img/telegram.svg" alt="" />
+            </a>
+            <a href="" class="footer__link">
+              <img src="img/whatsapp.svg" alt="" />
+            </a>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <a href="http://cyberanimals.uz/"
+            >Made by
+            <svg viewBox="0 0 593.71 46.48" xmlns="http://www.w3.org/2000/svg">
+              <path
+                class="cls-1"
+                d="M20.39,14.11,14.84,34.86l13.28,0,1.8-6.64H43.23L39.84,40.64l-7.37,5.81-28.22,0L0,40.67,7.11,14.11ZM7.77,11.62,9.33,5.81,16.67,0H44.92l4.25,5.81L45.85,18.26l-13.31,0,1.79-6.61Z"
+              ></path>
+              <path
+                class="cls-1"
+                d="M76.43,23.34l-.56.67-6,22.47H56.58l6-22.47L55.75,0H69.86Zm-1.76-15L81.48,0H95.59L78.26,21.08Z"
+              ></path>
+              <path
+                class="cls-1"
+                d="M99.11,11.62,102.23,0h34l4.25,5.81-3.79,14.11-4.18,3.32L135,26.56l-3.78,14.08-7.38,5.81-34,0,8.67-32.37h13.28l-.9,3.32,13.32,0,1.52-5.78Zm7.07,23.24,13.28,0L121,29.05H107.74Z"
+              ></path>
+              <path
+                class="cls-1"
+                d="M158.21,14.11l-.89,3.32h13.31l-3.12,11.62H154.23l-1.56,5.81h23.27l-3.15,11.62H136.27L145,14.11Zm-12.58-2.49L148.75,0h36.52l-3.15,11.62Z"
+              ></path>
+              <path
+                class="cls-1"
+                d="M188.79,11.62,191.91,0h34l4.25,5.81-4.65,17.4-6.74,5.31,2.16,18H206L204,29.05h-6.54l-4.69,17.43H179.46l8.67-32.37h13.28l-.9,3.32,13.32,0,1.53-5.78Z"
+              ></path>
+              <path
+                class="cls-1"
+                d="M284.05,11.62H270.77L277.41,0h19.92L299,46.48H285.71l-.4-11.62H270.77l-6.64,11.62H250.85l18.49-32.37h13.29l-5.18,9.13h7.47l-.47-12.32Z"
+              ></path>
+              <path
+                class="cls-1"
+                d="M327.58,14.11l-8.66,32.37H305.63l8.67-32.37ZM315,11.62,318.09,0h20.75L347,28.49,354.61,0h13.28L355.44,46.48H338l-9.76-34.86Z"
+              ></path>
+              <path
+                class="cls-1"
+                d="M375.36,46.48H362.08L374.53,0h13.28Z"
+              ></path>
+              <path
+                class="cls-1"
+                d="M414.38,46.48H401.09l-.69-19.12-5.12,19.12H382L394.45,0h18.26l1,27.36Zm1.69-23.24L429.32,0h18.26L435.13,46.48H421.85L427,27.36,416.83,45.12Z"
+              ></path>
+              <path
+                class="cls-1"
+                d="M473.31,11.62H460L466.67,0h19.92l1.66,46.48H475l-.4-11.62H460l-6.64,11.62H440.11L458.6,14.11h13.28l-5.18,9.13h7.47l-.46-12.32Z"
+              ></path>
+              <path
+                class="cls-1"
+                d="M507.38,0h13.25l-9.34,34.86h26.6l-3.15,11.62H494.89Z"
+              ></path>
+              <path
+                class="cls-1"
+                d="M563.36,14.11l-.9,3.32h20.75l4.29,5.81-4.69,17.43-7.37,5.81h-34l3.12-11.62h26.56l1.56-5.81H551.9l-4.25-5.81,2.43-9.13Zm-12.62-2.49,1.56-5.81L559.64,0h34.07l-3.13,11.62Z"
+              ></path></svg
+          ></a>
+          <p class="footer__copyright">
+            Copyright © 2022 LayKis. All rights reserved
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <div class="popup">
+      <div class="popup__content">
+        <div class="popup__close">
+          <a href="#"
+            ><span
+              ><svg
+                height="20px"
+                viewBox="0 0 329.26933 329"
+                width="20px"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="m194.800781 164.769531 128.210938-128.214843c8.34375-8.339844 8.34375-21.824219 0-30.164063-8.339844-8.339844-21.824219-8.339844-30.164063 0l-128.214844 128.214844-128.210937-128.214844c-8.34375-8.339844-21.824219-8.339844-30.164063 0-8.34375 8.339844-8.34375 21.824219 0 30.164063l128.210938 128.214843-128.210938 128.214844c-8.34375 8.339844-8.34375 21.824219 0 30.164063 4.15625 4.160156 9.621094 6.25 15.082032 6.25 5.460937 0 10.921875-2.089844 15.082031-6.25l128.210937-128.214844 128.214844 128.214844c4.160156 4.160156 9.621094 6.25 15.082032 6.25 5.460937 0 10.921874-2.089844 15.082031-6.25 8.34375-8.339844 8.34375-21.824219 0-30.164063zm0 0"
+                /></svg></span
+          ></a>
+        </div>
+
+        <div class="popup__row">
+          <img src="img/certificate-document.png" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <div class="cart cart__modal" id="cart">
+      <div class="cart__body">
+        <div class="cart__top">
+          <h2 class="cart__title">Корзина</h2>
+          <a id="navbarCartClose" href=""><img src="img/close.svg" alt="" /></a>
+        </div>
+        <div class="cart__content">
+          <div class="cart__products product"></div>
+          <div class="cart__paycheck">
+            <h2 class="cart__paycheck--title">Ваш заказ</h2>
+            <div class="cart__paycheck--price">
+              <h3 class="cart__paycheck--price-title">Итого:</h3>
+              <p><span id="allProductsSummaryPrice">54 000</span> сум</p>
+            </div>
+            <div class="cart__paycheck--btn">
+              <button id="orderButton">Оформить заказ</button>
+            </div>
+          </div>
+
+          <div class="cart__content--bg d-none">
+            <div class="cart__content--bg-img">
+              <img src="img/cart-bg.png" alt="" />
+            </div>
+            <p class="cart__content--bg-text">Ты ничего не купил?</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="popup__info">
+      <div class="popup__info--body">
+        <div class="popup__info--body-top">
+          <h2 class="popup__info--title">Оформить заказ</h2>
+          <a id="orderModalClose" href=""><img src="img/close.svg" alt="" /></a>
+        </div>
+        <div class="popup__info--body-content">
+          <form action="" id="orderForm">
+            <div class="user__firstname">
+              <input
+                placeholder="Фамилия"
+                id="userFirstName"
+                type="text"
+                required
+                autocomplete="off"
+              />
+            </div>
+            <div class="user__name">
+              <input
+                placeholder="Имя"
+                type="text"
+                id="userName"
+                required
+                autocomplete="off"
+              />
+            </div>
+            <div class="user__phone">
+              <input
+                placeholder="Номер"
+                id="userPhoneNumber"
+                type="tel"
+                autocomplete="off"
+                required
+              />
+            </div>
+
+            <div class="confirm__order">
+              <button id="orderProducts" type="submit">Заказать</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/sweetalert/sweetalert2.min.js"></script>
+    <script src="js/mask/imask.js"></script>
+    <script src="js/main.js" type="module"></script>
+  </body>
+</html>

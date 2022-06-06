@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "Паштет для кошек и котят 325g",
+    "price": 20000,
+    "summaryPrice": 0,
+    "count": 0,
+    "mass": 0.5,
+    "src": "img/product-metallic.png"
+  },
+  {
+    "id": 2,
+    "name": "Корм для собак Laykis 3кг",
+    "price": 36000,
+    "summaryPrice": 0,
+    "count": 0,
+    "mass": 3,
+    "src": "img/product-25kg.png"
+  },
+  {
+    "id": 3,
+    "name": "Лосось кусковой. Универсал 325g",
+    "price": 20000,
+    "summaryPrice": 0,
+    "count": 0,
+    "mass": 5,
+    "src": "img/product-metallic.png"
+  },
+  {
+    "id": 4,
+    "name": "Корм для собак Laykis 10кг",
+    "price": 120000,
+    "summaryPrice": 0,
+    "count": 0,
+    "mass": 10,
+    "src": "img/product-25kg.png"
+  }
+]

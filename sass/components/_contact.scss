@@ -1,0 +1,138 @@
+.contact {
+  padding: 8rem 15px;
+
+  &__types {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 45px 56px;
+    box-shadow: 0px 7px 30px rgba(71, 163, 160, 0.1);
+    border-radius: 20px;
+    flex-wrap: wrap;
+
+    @media only screen and(max-width: $bp-large) {
+      padding: 45px 15px;
+    }
+
+    @media only screen and(max-width: $bp-smallest) {
+      justify-content: initial;
+    }
+  }
+
+  &__geo,
+  &__phone,
+  &__email {
+    display: flex;
+    flex: 0 0 33.333%;
+    justify-content: center;
+    align-items: center;
+
+    & svg {
+      margin-right: 3rem;
+      width: 7.5rem;
+      height: 7.5rem;
+
+      @media only screen and(max-width: $bp-large) {
+        margin-right: 1.5rem;
+      }
+
+      @media only screen and(max-width: $bp-medium) {
+        width: 6rem;
+        height: 6rem;
+      }
+
+      @media only screen and(max-width: $bp-smallest) {
+        margin-bottom: 20px;
+      }
+    }
+
+    & h3 {
+      color: $color-yellow;
+      font-size: 2.4rem;
+      font-family: $ceraRoundProBold, sans-serif;
+      margin-bottom: 1rem;
+
+      @media only screen and(max-width: $bp-smallest) {
+        text-align: center;
+      }
+    }
+
+    & p,
+    & a {
+      color: $color-green;
+      font-size: 2rem;
+      font-family: $ceraRoundProBold;
+      max-width: 190px;
+      line-height: 24px;
+
+      @media only screen and(max-width: $bp-smallest) {
+        text-align: center;
+      }
+      //white-space:nowrap
+    }
+  }
+
+  &__geo,
+  &__phone {
+    border-right: 2px solid rgba(71, 163, 160, 0.5);
+
+    @media only screen and(max-width: $bp-medium) {
+      flex: 0 0 50%;
+    }
+
+    @media only screen and(max-width: $bp-smallest) {
+      flex: 0 0 100% !important;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      border-right: none;
+
+      padding-bottom: 30px;
+      border-bottom: 2px solid rgba(71, 163, 160, 0.5);
+      margin-bottom: 35px;
+    }
+  }
+
+  &__geo--text {
+    @media only screen and(max-width: $bp-smallest) {
+      max-width: 200px;
+      text-align: center;
+    }
+  }
+
+  &__phone {
+    @media only screen and(max-width: $bp-medium) {
+      border-right: 0;
+    }
+  }
+
+  &__email {
+    @media only screen and(max-width: $bp-medium) {
+      flex: 0 0 100%;
+      margin-top: 20px;
+    }
+
+    @media only screen and(max-width: $bp-smallest) {
+      flex: 0 0 100% !important;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      border-right: none;
+
+      padding-bottom: 30px;
+      margin-bottom: 35px;
+    }
+  }
+}
+
+.map {
+  width: 100%;
+  //margin-bottom: 10rem;
+
+  & iframe {
+    width: 100% !important;
+    margin-bottom: 10rem;
+  }
+}

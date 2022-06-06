@@ -1,0 +1,26 @@
+$ceraRoundProMedium: 'Cera Round Pro Medium';
+$ceraRoundProBold: 'Cera Round Pro Bold';
+$helveticaNeueCyr :'HelveticaNeueCyr-Medium';
+
+@font-face {
+  font-family: $ceraRoundProMedium;
+  src: url('../fonts/cera-round-medium/CeraRoundProMediumRegular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: $ceraRoundProBold;
+  src: url('../fonts/cera-round-bold/CeraRoundProBold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: $helveticaNeueCyr;
+  src: url('../fonts/helvetica-neue-cyr/HelveticaNeueCyr-Medium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
